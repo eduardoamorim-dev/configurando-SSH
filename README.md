@@ -4,7 +4,7 @@ Este guia resolve o problema de autenticação no Git, eliminando a necessidade 
 
 ---
 
-## 🚀 Por que usar SSH?
+## Por que usar SSH?
 
 Desde 2021, o GitHub não aceita mais senhas de conta via terminal. O SSH é o método mais seguro e prático porque:
 
@@ -114,7 +114,7 @@ Na primeira vez, digite `yes` e aperte **Enter**. A mensagem de sucesso deve ser
 
 ---
 
-## 🔄 Convertendo repositórios de HTTPS para SSH
+## Convertendo repositórios de HTTPS para SSH
 
 Se você já tem repositórios clonados que ainda pedem senha, rode isso dentro da pasta do projeto:
 
