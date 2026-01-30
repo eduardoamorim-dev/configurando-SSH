@@ -114,19 +114,40 @@ Na primeira vez, digite `yes` e aperte **Enter**. A mensagem de sucesso deve ser
 
 ---
 
-## Convertendo repositórios de HTTPS para SSH
+## Convertendo repositórios existentes de HTTPS para SSH
 
-Se você já tem repositórios clonados que ainda pedem senha, rode isso dentro da pasta do projeto:
+Se você já tem repositórios clonados via HTTPS e o Git ainda pede senha:
 
-1. Troque a URL (substitua pelo seu link SSH do repo):
+**Passo 1:** Entre na pasta do seu repositório:
+```bash
+cd /caminho/do/seu/repositorio
+```
+
+**Passo 2:** Verifique a URL atual:
+```bash
+git remote -v
+```
+
+Se aparecer algo como `https://github.com/USUARIO/REPOSITORIO.git`, você precisa trocar.
+
+**Passo 3:** Troque para SSH:
 ```bash
 git remote set-url origin git@github.com:USUARIO/REPOSITORIO.git
 ```
 
-2. Teste o envio:
+**Passo 4:** Confirme a mudança:
+```bash
+git remote -v
+```
+
+Agora deve aparecer `git@github.com:USUARIO/REPOSITORIO.git`
+
+**Passo 5:** Teste com um push:
 ```bash
 git push
 ```
+
+Não deve mais pedir senha! 
 
 ---
 
